@@ -1,0 +1,29 @@
+import 'package:flutter/material.dart';
+
+class TestCase2Containers extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: [
+          // Green full screen background
+          Expanded(
+            child: Container(color: Colors.green),
+          ),
+
+          // Red block
+          Container(
+            height: 300,
+            color: Colors.red,
+          ),
+
+          // Blue block (no height given)
+          Container(
+            height: 200,
+            color: Colors.blue,
+          ),
+        ],
+      ),
+    );
+  }
+}

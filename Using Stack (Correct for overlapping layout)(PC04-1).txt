@@ -1,0 +1,37 @@
+import 'package:flutter/material.dart';
+
+class TestCase1Stack extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Stack(
+        children: [
+          // Green background
+          Container(color: Colors.green),
+
+          // Red layer (bigger)
+          Positioned(
+            right: 0,
+            top: 0,
+            bottom: 0,
+            child: Container(
+              width: 250,
+              color: Colors.red,
+            ),
+          ),
+
+          // Blue small box
+          Positioned(
+            left: 0,
+            top: 0,
+            child: Container(
+              width: 200,
+              height: 200,
+              color: Colors.blue,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
